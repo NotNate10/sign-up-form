@@ -16,7 +16,6 @@
                 background: linear-gradient(45deg, rgb(55, 0, 80), rgb(0, 45, 100));
                 color: white;
                 font-family: Arial;
-                
             }
 
             input, button {
@@ -43,7 +42,7 @@
             }
 
             .main-top img{
-                width: 7em;
+                width: min(20%, 7rem);
                 margin-right: 1em;
                 border: 0.15em solid rgb(21, 135, 150);
                 border-radius: 100rem;
@@ -116,7 +115,7 @@
             }
 
             .sign-up-button:active {
-                transform: translateY(1px); /* pressed effect */
+                transform: translateY(1px);
                 box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             }
 
@@ -142,9 +141,25 @@
             }
 
             input::placeholder {
-                color: rgba(255, 255, 255, 0.6);  /* brighter, readable white */
-                opacity: 1;                        /* ensure consistent opacity across browsers */
-                font-weight: 400;                  /* optional: slightly lighter than input text */
+                color: rgba(255, 255, 255, 0.6);
+                opacity: 1;                        
+                font-weight: 400;                  
+            }
+
+            @media (max-width: 767px) {
+                .main-top {
+                    flex-direction: column;
+                    padding-top: 2rem;
+                    margin: 0;
+                }
+
+                * {
+                    outline: 1px red solid;
+                }
+
+                .main-top p {
+                    text-align: center;
+                }
             }
 
         </style>
@@ -199,7 +214,4 @@
         </div>
     </body>
 </html>
-
-
-
 
